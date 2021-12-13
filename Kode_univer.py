@@ -1,6 +1,7 @@
 import requests
 import pwd_vk
-# import urllib.parse - message encoding question
+# import urllib.parse - message encoding issue, not resolved
+# the code for publishing to Facebook should work, the problem is in the personal access key, I understand
 
 token = pwd_vk.access_token
 version = pwd_vk.v
@@ -27,7 +28,7 @@ def message_post_fb(my_wall_number, message_user, token_fb):
 
 if __name__ == '__main__':
     # input message
-    message_user = input()
+    message_user = input('Введите сообщение: ')
     message_user = message_in(message_user)
 
     # posting message on VKontakte
